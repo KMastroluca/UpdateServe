@@ -27,9 +27,15 @@ const template = `
   </body>
 </html>
 
-`
+`;
 
-console.log(template);
+
+
+app.get('/', (req, res) => {
+    console.log('Handled A Connection..');
+    res.send(template);
+});
+
 
 
 app.listen(3000, ()=>{
